@@ -37,7 +37,7 @@ namespace FunctionAppContagem
                 throw new Exception("Simulação de falha!");
             }
 
-            logger.LogInformation($"#### Contador - Valor atual: {valorAtualContador}");
+            logger.LogInformation($"####* Contador - Valor atual: {valorAtualContador}");
 
             var response = req.CreateResponse(HttpStatusCode.OK);
             response.WriteAsJsonAsync(new ResultadoContador(valorAtualContador));
